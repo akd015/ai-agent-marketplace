@@ -58,9 +58,15 @@
 <body>
     <div class="soon-container">
         <i class="fas fa-envelope"></i>
-        <h1>Contact</h1>
-        <p>Contact and support coming soon. Please check back later!</p>
-        <button class="btn" onclick="window.location.href='index.html'">Back to Home</button>
+        <h1>Contact & Support</h1>
+        <p>Have a question or need help? Fill out the demo form below:</p>
+        <form style="margin: 24px 0; text-align:left; max-width: 350px; margin-left:auto; margin-right:auto;">
+            <label>Your Name<br><input type="text" placeholder="Your name" style="width:100%;padding:8px;margin:6px 0 14px 0;border-radius:8px;border:1px solid #b5cfff;"></label><br>
+            <label>Email<br><input type="email" placeholder="you@email.com" style="width:100%;padding:8px;margin:6px 0 14px 0;border-radius:8px;border:1px solid #b5cfff;"></label><br>
+            <label>Message<br><textarea placeholder="How can we help you?" style="width:100%;padding:8px;margin:6px 0 14px 0;border-radius:8px;border:1px solid #b5cfff;"></textarea></label><br>
+            <button class="btn" type="button" onclick="alert('Demo: Your message would be sent!')">Send Message</button>
+        </form>
+        <button class="btn" onclick="window.location.href='index.html'" style="background:#e7edf8;color:#1d4ed8;">Back to Home</button>
     </div>
 </body>
 </html>

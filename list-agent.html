@@ -59,8 +59,22 @@
     <div class="soon-container">
         <i class="fas fa-user-plus"></i>
         <h1>List Your Agent</h1>
-        <p>Agent listing is coming soon. Soon you'll be able to submit your own AI agent to the marketplace!</p>
-        <button class="btn" onclick="window.location.href='index.html'">Back to Home</button>
+        <p>Submit your AI agent to the marketplace! Try the demo form below:</p>
+        <form style="margin: 24px 0; text-align:left; max-width: 350px; margin-left:auto; margin-right:auto;">
+            <label>Name of Agent<br><input type="text" placeholder="e.g. Code Reviewer" style="width:100%;padding:8px;margin:6px 0 14px 0;border-radius:8px;border:1px solid #b5cfff;"></label><br>
+            <label>Category<br>
+                <select style="width:100%;padding:8px;margin:6px 0 14px 0;border-radius:8px;border:1px solid #b5cfff;">
+                    <option>Business</option>
+                    <option>Developer</option>
+                    <option>Marketing</option>
+                    <option>Education</option>
+                    <option>Legal & Compliance</option>
+                </select>
+            </label><br>
+            <label>Description<br><textarea placeholder="Describe your agent's capabilities" style="width:100%;padding:8px;margin:6px 0 14px 0;border-radius:8px;border:1px solid #b5cfff;"></textarea></label><br>
+            <button class="btn" type="button" onclick="alert('Demo: Your agent would be submitted for review!')">Submit Agent</button>
+        </form>
+        <button class="btn" onclick="window.location.href='index.html'" style="background:#e7edf8;color:#1d4ed8;">Back to Home</button>
     </div>
 </body>
 </html>
