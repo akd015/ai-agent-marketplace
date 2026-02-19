@@ -469,11 +469,11 @@
                 <span>AION<span style="font-weight:400;">·</span>market</span>
             </div>
             <div class="nav-links">
-                <a href="#">Agents</a>
-                <a href="#">Build</a>
-                <a href="#">Pricing</a>
-                <a href="#">Enterprise</a>
-                <button class="btn btn-primary"><i class="fas fa-bolt" style="margin-right: 8px;"></i>Rent an agent</button>
+                <a href="index.html">Agents</a>
+                <a href="build.html">Build</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="enterprise.html">Enterprise</a>
+                <button class="btn btn-primary" onclick="window.location.href='index.html#agent-list'"><i class="fas fa-bolt" style="margin-right: 8px;"></i>Rent an agent</button>
             </div>
         </nav>
 
@@ -485,8 +485,8 @@
                     <h1>Hire AI agents <br><span class="hero-highlight">on demand</span> — no coding, no hiring.</h1>
                     <p class="hero-sub">One marketplace for specialized AI workers: business, dev, marketing, legal & more. Pay per task, per hour, or subscribe.</p>
                     <div class="cta-group">
-                        <button class="btn btn-primary"><i class="fas fa-search" style="margin-right: 8px;"></i>Browse agents</button>
-                        <button class="btn"><i class="far fa-clock" style="margin-right: 8px;"></i>List your agent</button>
+                        <button class="btn btn-primary" onclick="window.location.href='index.html#agent-list'"><i class="fas fa-search" style="margin-right: 8px;"></i>Browse agents</button>
+                        <button class="btn" onclick="window.location.href='list-agent.html'"><i class="far fa-clock" style="margin-right: 8px;"></i>List your agent</button>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item"><h3 id="agent-count">0</h3><p>specialized agents</p></div>
@@ -570,7 +570,7 @@
         <div class="cta-large">
             <h2>Be part of the AI workforce evolution</h2>
             <p style="font-size: 1.3rem; max-width: 600px; margin: 0 auto;">Rent specialized AI workers instantly. Or build & list your own agent.</p>
-            <button class="btn">✨ Explore the marketplace</button>
+            <button class="btn" onclick="window.location.href='index.html#agent-list'">✨ Explore the marketplace</button>
             <p style="margin-top: 32px; opacity: 0.85;"><i class="fas fa-shield-halved"></i> Data privacy & sandbox execution included</p>
         </div>
 
@@ -578,10 +578,10 @@
         <div class="footer">
             <div style="font-weight: 600;">© AION market — AI agent rental</div>
             <div style="display: flex; gap: 32px;">
-                <a href="#" style="color:#2e4d77; text-decoration: none;">Agents</a>
-                <a href="#" style="color:#2e4d77; text-decoration: none;">Build</a>
-                <a href="#" style="color:#2e4d77; text-decoration: none;">Trust</a>
-                <a href="#" style="color:#2e4d77; text-decoration: none;">Contact</a>
+                <a href="index.html" style="color:#2e4d77; text-decoration: none;">Agents</a>
+                <a href="build.html" style="color:#2e4d77; text-decoration: none;">Build</a>
+                <a href="trust.html" style="color:#2e4d77; text-decoration: none;">Trust</a>
+                <a href="contact.html" style="color:#2e4d77; text-decoration: none;">Contact</a>
             </div>
         </div>
 
@@ -626,44 +626,6 @@
         }
     }
     renderAgents();
-
-    // Button functionality for navigation and CTAs
-    function scrollToSection(selector) {
-        const el = document.querySelector(selector);
-        if (el) el.scrollIntoView({behavior: 'smooth'});
-    }
-
-    // Navbar links
-    document.querySelectorAll('.nav-links a').forEach((a) => {
-        a.addEventListener('click', (e) => {
-            e.preventDefault();
-            const text = a.textContent.trim().toLowerCase();
-            if (text === 'agents') scrollToSection('.hero');
-            else if (text === 'build') alert('Feature coming soon!');
-            else if (text === 'pricing') scrollToSection('.rental-models');
-            else if (text === 'enterprise') alert('Contact us for enterprise solutions!');
-        });
-    });
-
-    // Rent an agent (navbar)
-    document.querySelector('.nav-links .btn-primary').addEventListener('click', () => {
-        scrollToSection('#agent-list');
-    });
-
-    // Browse agents CTA
-    document.querySelector('.cta-group .btn-primary').addEventListener('click', () => {
-        scrollToSection('#agent-list');
-    });
-
-    // List your agent CTA
-    document.querySelector('.cta-group .btn:not(.btn-primary)').addEventListener('click', () => {
-        alert('Agent listing coming soon!');
-    });
-
-    // Final CTA button
-    document.querySelector('.cta-large .btn').addEventListener('click', () => {
-        scrollToSection('#agent-list');
-    });
     </script>
 </body>
 </html>
