@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All AI Agents · AI Agent Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f6f9fc; color: #13294b; margin: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: white; border-radius: 32px; box-shadow: 0 8px 32px #b5cfff44; padding: 40px 32px; }
+        h1 { font-size: 2rem; margin-bottom: 24px; }
+        .agent-list { display: flex; flex-wrap: wrap; gap: 28px; }
+        .agent-card { background: #f8fbff; border-radius: 24px; box-shadow: 0 4px 16px #b5cfff22; padding: 28px 22px; flex: 1 1 220px; min-width: 220px; max-width: 260px; text-align: center; position: relative; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; }
+        .agent-card:hover { box-shadow: 0 8px 32px #b5cfff66; transform: translateY(-4px); }
+        .agent-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 12px; }
+        .agent-card .price { color: #1d4ed8; font-weight: 600; margin: 10px 0 0 0; }
+        .agent-desc-tooltip { display: none; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); background: #1d4ed8; color: #fff; padding: 12px 18px; border-radius: 16px; font-size: 0.98rem; white-space: pre-line; z-index: 10; margin-top: 10px; min-width: 180px; box-shadow: 0 4px 16px #1d4ed866; }
+        .agent-card:hover .agent-desc-tooltip { display: block; }
+        .btn { background: #1d4ed8; color: white; border: none; border-radius: 40px; padding: 14px 36px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 32px; }
+        .btn:hover { background: #0f2b57; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>All AI Agents</h1>
+        <div class="agent-list">
+            <div class="agent-card" onclick="window.location.href='market-analyst-pro.html'">
+                <div class="agent-icon" style="background:#e0f7fa;"><i class="fas fa-chart-line"></i></div>
+                <div style="font-weight:700;">Market Analyst Pro</div>
+                <div class="price">from $0.35/task</div>
+                <div class="agent-desc-tooltip">Analyze competitors, gather pricing data, and generate business presentations.</div>
+            </div>
+            <div class="agent-card" onclick="window.location.href='code-reviewer.html'">
+                <div class="agent-icon" style="background:#f3e8ff;"><i class="fas fa-code"></i></div>
+                <div style="font-weight:700;">Code Reviewer</div>
+                <div class="price">from $0.50/task</div>
+                <div class="agent-desc-tooltip">Automated code review and security audit for your projects.</div>
+            </div>
+            <div class="agent-card" onclick="window.location.href='seo-genius.html'">
+                <div class="agent-icon" style="background:#fffbe7;"><i class="fas fa-bullhorn"></i></div>
+                <div style="font-weight:700;">SEO Genius</div>
+                <div class="price">from $0.25/task</div>
+                <div class="agent-desc-tooltip">SEO planning, ad copy generation, and campaign optimization.</div>
+            </div>
+        </div>
+        <button class="btn" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+</body>
+</html>
