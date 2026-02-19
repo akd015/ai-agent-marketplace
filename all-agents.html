@@ -15,8 +15,33 @@
         .agent-card:hover { box-shadow: 0 8px 32px #b5cfff66; transform: translateY(-4px); }
         .agent-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 12px; }
         .agent-card .price { color: #1d4ed8; font-weight: 600; margin: 10px 0 0 0; }
-        .agent-desc-tooltip { display: none; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); background: #1d4ed8; color: #fff; padding: 12px 18px; border-radius: 16px; font-size: 0.98rem; white-space: pre-line; z-index: 10; margin-top: 10px; min-width: 180px; box-shadow: 0 4px 16px #1d4ed866; }
-        .agent-card:hover .agent-desc-tooltip { display: block; }
+        .agent-desc-tooltip {
+            display: none;
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            transform: translateX(-50%) translateY(-18px);
+            background: rgba(29, 78, 216, 0.92);
+            color: #fff;
+            padding: 14px 22px;
+            border-radius: 18px;
+            font-size: 1rem;
+            white-space: pre-line;
+            z-index: 10;
+            min-width: 200px;
+            box-shadow: 0 4px 24px #1d4ed866;
+            backdrop-filter: blur(8px);
+            pointer-events: none;
+        }
+        .agent-card:hover .agent-desc-tooltip {
+            display: block;
+        }
+        .agent-card:hover {
+            filter: blur(2px) brightness(0.95);
+        }
+        .agent-card:hover .agent-desc-tooltip {
+            filter: none;
+        }
         .btn { background: #1d4ed8; color: white; border: none; border-radius: 40px; padding: 14px 36px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 32px; }
         .btn:hover { background: #0f2b57; }
     </style>
@@ -26,22 +51,22 @@
         <h1>All AI Agents</h1>
         <div class="agent-list">
             <div class="agent-card" onclick="window.location.href='market-analyst-pro.html'">
+                <div class="agent-desc-tooltip">Analyze competitors, gather pricing data, and generate business presentations.</div>
                 <div class="agent-icon" style="background:#e0f7fa;"><i class="fas fa-chart-line"></i></div>
                 <div style="font-weight:700;">Market Analyst Pro</div>
                 <div class="price">from $0.35/task</div>
-                <div class="agent-desc-tooltip">Analyze competitors, gather pricing data, and generate business presentations.</div>
             </div>
             <div class="agent-card" onclick="window.location.href='code-reviewer.html'">
+                <div class="agent-desc-tooltip">Automated code review and security audit for your projects.</div>
                 <div class="agent-icon" style="background:#f3e8ff;"><i class="fas fa-code"></i></div>
                 <div style="font-weight:700;">Code Reviewer</div>
                 <div class="price">from $0.50/task</div>
-                <div class="agent-desc-tooltip">Automated code review and security audit for your projects.</div>
             </div>
             <div class="agent-card" onclick="window.location.href='seo-genius.html'">
+                <div class="agent-desc-tooltip">SEO planning, ad copy generation, and campaign optimization.</div>
                 <div class="agent-icon" style="background:#fffbe7;"><i class="fas fa-bullhorn"></i></div>
                 <div style="font-weight:700;">SEO Genius</div>
                 <div class="price">from $0.25/task</div>
-                <div class="agent-desc-tooltip">SEO planning, ad copy generation, and campaign optimization.</div>
             </div>
         </div>
         <button class="btn" onclick="window.location.href='index.html'">Back to Home</button>
