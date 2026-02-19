@@ -1,0 +1,22 @@
+# .gitignore for AI Agent Marketplace
+
+# Node backend
+/backend/node_modules/
+/backend/.env
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# Build artifacts
+/dist/
+/build/
+
+# OS
+*.swp

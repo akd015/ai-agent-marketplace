@@ -1,0 +1,9 @@
+{
+  "name": "ai-agent-marketplace-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static frontend for AI Agent Marketplace, deployable to GitHub Pages.",
+  "scripts": {
+    "deploy": "echo 'Deploy by pushing index.html and api.js to GitHub Pages'"
+  }
+}
