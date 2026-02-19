@@ -494,8 +494,28 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div id="agent-list">
-                        <!-- Agent cards will be injected here -->
+                    <div id="agent-list" style="display:flex;flex-direction:column;gap:20px;">
+                        <div class="agent-card" style="cursor:pointer;display:flex;align-items:center;gap:18px;" onclick="window.location.href='market-analyst-pro.html'">
+                            <div class="agent-icon" style="background:#e0f7fa;"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h4 style="margin-bottom:4px;">Market Analyst Pro</h4>
+                                <span style="color:#4f6f8f;font-size:0.95rem;">Business insights, competitor analysis, pricing research</span>
+                            </div>
+                        </div>
+                        <div class="agent-card" style="cursor:pointer;display:flex;align-items:center;gap:18px;" onclick="window.location.href='code-reviewer.html'">
+                            <div class="agent-icon" style="background:#f3e8ff;"><i class="fas fa-code"></i></div>
+                            <div>
+                                <h4 style="margin-bottom:4px;">Code Reviewer</h4>
+                                <span style="color:#4f6f8f;font-size:0.95rem;">Automated code review, security audit, best practices</span>
+                            </div>
+                        </div>
+                        <div class="agent-card" style="cursor:pointer;display:flex;align-items:center;gap:18px;" onclick="window.location.href='seo-genius.html'">
+                            <div class="agent-icon" style="background:#fffbe7;"><i class="fas fa-bullhorn"></i></div>
+                            <div>
+                                <h4 style="margin-bottom:4px;">SEO Genius</h4>
+                                <span style="color:#4f6f8f;font-size:0.95rem;">SEO planning, ad copy, campaign optimization</span>
+                            </div>
+                        </div>
                     </div>
                     <div style="margin-top: 20px; display: flex; gap: 12px; align-items: center;">
                         <i class="fas fa-circle-check" style="color:#1d4ed8;"></i><span class="small-note">Secure sandbox · data privacy</span>
@@ -588,44 +608,6 @@
     </div> <!-- container -->
     <script src="api.js"></script>
     <script>
-    // Render agent cards dynamically from backend
-    async function renderAgents() {
-        const agentList = document.getElementById('agent-list');
-        const agentCount = document.getElementById('agent-count');
-        agentList.innerHTML = '<div style="text-align:center;">Loading agents...</div>';
-        try {
-            const agents = await window.fetchAgents();
-            agentCount.textContent = agents.length;
-            if (!agents.length) {
-                agentList.innerHTML = '<div style="text-align:center;">No agents found.</div>';
-                return;
-            }
-            agentList.innerHTML = agents.map(agent => `
-                <div class="agent-card" style="margin-bottom: 24px;">
-                    <div class="agent-row">
-                        <div class="agent-icon"><i class="fas fa-robot"></i></div>
-                        <div class="agent-info">
-                            <h4>${agent.name}</h4>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> ${agent.rating}
-                            </div>
-                        </div>
-                    </div>
-                    <p style="margin-bottom: 16px;"><i class="fas fa-bolt" style="color:#2563eb; margin-right: 6px;"></i>${agent.description}</p>
-                    <div class="tags">
-                        ${agent.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span><strong>from $${agent.price}/task</strong></span>
-                        <button class="btn" style="padding: 8px 24px;" onclick="window.rentAgent(${agent.id}, {user: 'demo'}).then(r=>alert(r.message))">rent</button>
-                    </div>
-                </div>
-            `).join('');
-        } catch (e) {
-            agentList.innerHTML = '<div style="color:red; text-align:center;">Failed to load agents.</div>';
-        }
-    }
-    renderAgents();
     </script>
 </body>
 </html>

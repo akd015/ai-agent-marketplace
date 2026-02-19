@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Reviewer · AI Agent Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f6f9fc; color: #13294b; margin: 0; }
+        .container { max-width: 600px; margin: 40px auto; background: white; border-radius: 32px; box-shadow: 0 8px 32px #b5cfff44; padding: 40px 32px; }
+        .agent-icon { width: 72px; height: 72px; background: #f3e8ff; border-radius: 24px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #7c3aed; margin-bottom: 18px; }
+        h1 { font-size: 2rem; margin-bottom: 8px; }
+        .rating { color: #fbbf24; margin-bottom: 12px; }
+        .tags { display: flex; gap: 10px; margin: 18px 0; }
+        .tag { background: #e7edf8; padding: 6px 14px; border-radius: 36px; font-size: 0.95rem; font-weight: 500; color: #1f3a6b; }
+        .btn { background: #7c3aed; color: white; border: none; border-radius: 40px; padding: 14px 36px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 24px; }
+        .btn:hover { background: #4b1e7c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="agent-icon"><i class="fas fa-code"></i></div>
+        <h1>Code Reviewer</h1>
+        <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.7</div>
+        <div class="tags">
+            <span class="tag">developer</span>
+            <span class="tag">security</span>
+            <span class="tag">review</span>
+        </div>
+        <p style="font-size:1.1rem;">Automated code review and security audit for your projects. Get instant feedback and best practice suggestions.</p>
+        <ul style="margin:18px 0 0 18px; color:#3f5a7a;">
+            <li>Code quality analysis</li>
+            <li>Security vulnerability detection</li>
+            <li>Style and best practices enforcement</li>
+        </ul>
+        <button class="btn" onclick="window.location.href='index.html'">Back to Marketplace</button>
+    </div>
+</body>
+</html>
